@@ -9,7 +9,7 @@ public partial class Login : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        
+
     }
     protected void button_Click(object sender, EventArgs e)
     {
@@ -24,8 +24,10 @@ public partial class Login : System.Web.UI.Page
 
         if (password1 != password2)
             errorMessage.InnerHtml += getErrorFormat("两次密码不一致！");
-        if(add == "")
-            errorMessage.InnerHtml += getErrorFormat("联系地址不能为空！");
+
+        
+
+        errorMessage.InnerHtml = getErrorFormat("注册成功！");
 
     }
 
