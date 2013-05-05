@@ -7,12 +7,14 @@
        
         document.getElementById("input-password-control").className = "control-group error";
         document.getElementById("login-password-hints").innerHTML = "密码输入格式不正确!";
+        return false;
     }
     if (username.length < 6 || username.length > 12) {
         document.getElementById("input-username-control").className = "control-group error";
         document.getElementById("login-username-hints").innerHTML = "账户输入格式不正确!";
-        
+        return false;
     }
+    return true;
     
 }
 
